@@ -133,31 +133,41 @@ The program prints the symbolic stream function to the terminal, then displays t
 
 ## Examples
 
-### Flow Over a Cylinder
-Superimpose Uniform Flow (S1) + Doublet (S4) centered at the origin:
+### Flow Over a Cylinder — S1 + S4
+Superimpose Uniform Flow + Doublet centered at the origin:
 ```
 Number of functions: 2
 S1 → origin (0, 0) → U = 1
-S4 → origin (0, 0) → k = 2π  (set k = 6.283)
+S4 → origin (0, 0) → k = 6.283
 ```
+![Flow over a cylinder](cylinder.png)
 
-### Rankine Half-Body
-Superimpose Uniform Flow (S1) + Source (S2):
+---
+
+### Rankine Half-Body — S1 + S2
+Superimpose Uniform Flow + Source:
 ```
 Number of functions: 2
 S1 → origin (0, 0) → U = 1
 S2 → origin (0, 0) → Q = 2
 ```
-The program will automatically print the stagnation point location and body outline equation.
+> When S1 + S2 are selected, the program automatically prints the stagnation point location and body outline equation.
 
-### Lifting Cylinder (Kutta-Joukowski)
-Superimpose Uniform Flow (S1) + Doublet (S4) + Vortex (S5):
+![Rankine half-body](rankine.png)
+
+---
+
+### Lifting Cylinder (Kutta-Joukowski) — S1 + S4 + S5
+Superimpose Uniform Flow + Doublet + Vortex:
 ```
 Number of functions: 3
 S1 → origin (0, 0) → U = 1
 S4 → origin (0, 0) → k = 6.283
 S5 → origin (0, 0) → R = 1, w = 0.5
 ```
+> This configuration demonstrates the Kutta-Joukowski theorem — the fundamental principle behind lift generation on airfoils.
+
+![Lifting cylinder](lifting_cylinder.png)
 
 ---
 
@@ -174,4 +184,4 @@ The final plot displays:
 ## Author
 
 **Aadi Tripathi**  
-Date: March 2025  
+Date: March 2025
