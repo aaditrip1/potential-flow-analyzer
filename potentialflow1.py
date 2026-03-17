@@ -19,7 +19,7 @@ Dependencies:
     numpy, matplotlib, sympy
 
 Author: Aadi Tripathi
-Date: 03/20/2025
+Date: March 2025
 """
 
 
@@ -276,11 +276,9 @@ def plot_streamlines_outside_wall(ax, X, Y, U, V, wall_mask):
    U_masked = np.where(wall_mask, np.nan, U)  # Mask U values at the wall
    V_masked = np.where(wall_mask, np.nan, V)  # Mask V values at the wall
    
-   # Replace velocity values with NaN at every wall or interior point.
-    # np.where reads: "if wall_mask is True at this point use NaN,
-    # otherwise keep the real velocity value."
-    # matplotlib's streamplot silently skips NaN points so nothing gets
-    # drawn inside the body without needing any extra logic.
+   # Draw streamlines across the masked velocity field.
+    # density=2.5 controls how many lines are drawn — higher means more
+    # lines and more detail but can look cluttered above 3.0
    ax.streamplot(X, Y, U_masked, V_masked, color='black', density=2.5)  # Plot streamlines
 
 
